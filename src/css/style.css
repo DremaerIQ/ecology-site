@@ -251,6 +251,44 @@ main>section {
 
 /* plants section end */
 
+/* about section start */
+.about__items {
+    display: flex;
+    list-style-type: none;
+}
+
+.about__card {
+    width: 34%;
+    height: 250px;
+
+    background-color: white;
+    
+    position: relative;
+
+    &:first-of-type {
+        background: url("../img/internet.jpg") center/ cover no-repeat;
+    }
+    &:nth-of-type(2) {
+        background: url("../img/events.jpg") center/ cover no-repeat;
+    }
+    &:last-of-type {
+        background: url("../img/friends.jpg") center/ cover no-repeat;
+    }
+
+    &::before {
+        content: attr(data-text);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-weight: 700;
+        font-size: 24px;
+        text-shadow: 0 0 2px black;
+    }
+}
+/* about section end */
+
 /* media start */
 @media screen and (max-width: 800px) {
     .plants__card::before, 
@@ -259,3 +297,4 @@ main>section {
     }
 }
 /* media end */
+
