@@ -231,19 +231,19 @@ main>section {
     &:first-of-type {
         background: url("../img/plant0.jpg") center/ cover no-repeat;
     }
-    
+
     &:nth-of-type(2) {
         background: url("../img/plant1.jpg") center/ cover no-repeat;
     }
-    
+
     &:nth-of-type(3) {
         background: url("../img/plant2.jpg") center/ cover no-repeat;
     }
-    
+
     &:nth-of-type(4) {
         background: url("../img/plant3.jpg") center/ cover no-repeat;
     }
-    
+
     &:last-of-type {
         background: url("../img/plant4.jpg") center/ cover no-repeat;
     }
@@ -262,15 +262,17 @@ main>section {
     height: 250px;
 
     background-color: white;
-    
+
     position: relative;
 
     &:first-of-type {
         background: url("../img/internet.jpg") center/ cover no-repeat;
     }
+
     &:nth-of-type(2) {
         background: url("../img/events.jpg") center/ cover no-repeat;
     }
+
     &:last-of-type {
         background: url("../img/friends.jpg") center/ cover no-repeat;
     }
@@ -287,14 +289,64 @@ main>section {
         text-shadow: 0 0 2px black;
     }
 }
+
 /* about section end */
+
+/* recycle section start */
+.recycle__content {
+    display: flex;
+
+    &>div {
+        width: 50%;
+        min-height: 300px;
+        padding: 20px;
+    }
+}
+
+.recycle__image {
+    background: url("../img/land0.jpg") center / cover no-repeat;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        max-width: 30%;
+        height: 30%;
+        aspect-ratio: 1;
+
+        background-image: var(--icon);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+.recycle__text {
+    text-align: center;
+}
+
+.recycle__text-src {
+    font-weight: 500;
+    padding: 20px;
+    backdrop-filter: blur(2px) invert(8%);
+    border-radius: 15px;
+}
+
+/* recycle section end */
 
 /* media start */
 @media screen and (max-width: 800px) {
-    .plants__card::before, 
+
+    .plants__card::before,
     .plants__card::after {
         content: none;
     }
 }
-/* media end */
 
+/* media end */
