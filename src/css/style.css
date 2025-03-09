@@ -340,6 +340,39 @@ main>section {
 
 /* recycle section end */
 
+/* appointment section start */
+.appointment__form > form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+
+    & > input {
+        width: 80dvw;
+        padding: 5px;
+    }
+
+    & > button {
+        display: flex;
+        align-items: flex-end;
+        column-gap: 15px;
+
+        width: fit-content;
+        padding: 5px 15px 8px;
+
+        background-color: white;
+        border: none;
+        border-radius: 20px;
+        box-shadow: 0 2px 15px gray;
+
+        & img {
+            width: 20px;
+            aspect-ratio: 1;
+        }
+    }
+}
+/* appointment section end */
+
 /* media start */
 @media screen and (max-width: 800px) {
 
